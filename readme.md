@@ -6,10 +6,28 @@ Simple API to create conversations and send messages
 
 ### Get all conversations
 
-endpoint: ``
+endpoint: `https://chat-api-bhmzbezkwb.now.sh/conversations`
 
 response
 ```
+[
+    {
+        "_id": "5d311e3942d9de6a2f9ea9c1",
+        "name": "Fulano da Silva",
+        "__v": 0
+    },
+    {
+        "_id": "5d311e5142d9de6a2f9ea9c2",
+        "name": "Sirlene Santos",
+        "__v": 0
+    },
+    {
+        "_id": "5d311e5842d9de6a2f9ea9c3",
+        "name": "Josue pereira",
+        "__v": 0
+    },
+    ...
+]
 ```
 
 Properties
@@ -18,10 +36,30 @@ Properties
 
 ### Get conversation detail
 
-endpoint: ``
+endpoint: `https://chat-api-bhmzbezkwb.now.sh/conversations/:id`
 
 response:
 ```
+{
+    "conversation": "Fulano da Silva",
+    "messages": [
+        {
+            "_id": "5d31227c070d5d6d1c38aaa3",
+            "value": "Hey",
+            "direction": "incoming",
+            "conversation": "5d311e3942d9de6a2f9ea9c1",
+            "__v": 0
+        },
+        {
+            "_id": "5d312284070d5d6d1c38aaa4",
+            "value": "Hey, how have you been?",
+            "direction": "outgoing",
+            "conversation": "5d311e3942d9de6a2f9ea9c1",
+            "__v": 0
+        },
+        ...
+    ]
+}
 ```
 
 Properties

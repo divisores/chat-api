@@ -6,6 +6,8 @@ const { SERVER_PORT } = require('./settings')
 const ConversationController = require('./api/conversations/controller')
 const MessageController = require('./api/messages/controller')
 
+const port = process.env.PORT || SERVER_PORT
+
 const app = express()
 
 app.use(bodyParser.urlencoded({ extended: false }))
@@ -33,8 +35,8 @@ app.post('/message', async (req, res) => {
 
 module.exports = {
   startServer: () => {
-    app.listen({ port: SERVER_PORT }, () => {
-      console.log(`🚀 Server ready at http://localhost:${SERVER_PORT}`)
+    app.listen({ port }, () => {
+      console.log(`🚀 Server ready at http://localhost:${port}`)
     })
   }
 }
