@@ -6,27 +6,23 @@ Simple API to create conversations and send messages
 
 ### Get all conversations
 
-endpoint: `https://chat-api-bhmzbezkwb.now.sh/conversations`
+endpoint: `https://webchatapi.herokuapp.com/conversations`
 
 response
 ```
 [
     {
-        "_id": "5d311e3942d9de6a2f9ea9c1",
-        "name": "Fulano da Silva",
-        "__v": 0
+        "_id": "5d35bcd6ce827600040936d0",
+        "name": "Kurzurlg"
     },
     {
-        "_id": "5d311e5142d9de6a2f9ea9c2",
-        "name": "Sirlene Santos",
-        "__v": 0
+        "_id": "5d35bcdace827600040936d1",
+        "name": "Cadar"
     },
     {
-        "_id": "5d311e5842d9de6a2f9ea9c3",
-        "name": "Josue pereira",
-        "__v": 0
-    },
-    ...
+        "_id": "5d35bce9ce827600040936d4",
+        "name": "Felagodoa"
+    }
 ]
 ```
 
@@ -36,28 +32,31 @@ Properties
 
 ### Get conversation detail
 
-endpoint: `https://chat-api-bhmzbezkwb.now.sh/conversations/:id`
+endpoint: `https://webchatapi.herokuapp.com/conversations/:id`
 
 response:
 ```
 {
-    "conversation": "Fulano da Silva",
+    "conversation": "Cadar",
     "messages": [
         {
-            "_id": "5d31227c070d5d6d1c38aaa3",
-            "value": "Hey",
+            "_id": "5d35c14dce827600040936e0",
+            "value": "Please call me I need to speak to you",
             "direction": "incoming",
-            "conversation": "5d311e3942d9de6a2f9ea9c1",
-            "__v": 0
+            "conversation": "5d35bcdace827600040936d1"
         },
         {
-            "_id": "5d312284070d5d6d1c38aaa4",
-            "value": "Hey, how have you been?",
-            "direction": "outgoing",
-            "conversation": "5d311e3942d9de6a2f9ea9c1",
-            "__v": 0
+            "_id": "5d35c15dce827600040936e1",
+            "value": "Barbara needs help",
+            "direction": "incoming",
+            "conversation": "5d35bcdace827600040936d1"
         },
-        ...
+        {
+            "_id": "5d35c183ce827600040936e2",
+            "value": "Sure, What's her number?",
+            "direction": "outgoing",
+            "conversation": "5d35bcdace827600040936d1"
+        }
     ]
 }
 ```
