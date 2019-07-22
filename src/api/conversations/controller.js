@@ -13,7 +13,7 @@ const ConversationController = {
     })
 
     const withMessages = {
-      conversation: conversation.name,
+      name: conversation.name,
       messages
     }
 

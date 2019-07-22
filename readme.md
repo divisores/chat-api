@@ -6,7 +6,7 @@ Simple API to create conversations and send messages
 
 ### Get all conversations
 
-endpoint: `https://webchatapi.herokuapp.com/conversations`
+endpoint: `https://webchatapi.herokuapp.com/conversation`
 
 response
 ```
@@ -32,12 +32,12 @@ Properties
 
 ### Get conversation detail
 
-endpoint: `https://webchatapi.herokuapp.com/conversations/:id`
+endpoint: `https://webchatapi.herokuapp.com/conversation/:id`
 
 response:
 ```
 {
-    "conversation": "Cadar",
+    "name": "Cadar",
     "messages": [
         {
             "_id": "5d35c14dce827600040936e0",
