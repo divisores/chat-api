@@ -1,0 +1,8 @@
+{
+  "name": "Start on Heroku: Node.js",
+  "description": "Chat api",
+  "repository": "https://github.com/divisioinc/chat-api",
+  "logo": "https://cdn.rawgit.com/heroku/node-js-getting-started/master/public/node.svg",
+  "keywords": ["node", "express", "heroku"],
+  "image": "heroku/nodejs"
+}
