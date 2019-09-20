@@ -1,5 +1,6 @@
 const express = require('express')
 const bodyParser = require('body-parser')
+const cors = require('cors')
 
 const { SERVER_PORT } = require('./settings')
 
@@ -12,6 +13,7 @@ const app = express()
 
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
+app.use(cors())
 
 app.get('/conversation', async (req, res) => {
   const conversations = await ConversationController.getConversations()
